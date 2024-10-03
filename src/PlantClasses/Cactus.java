@@ -1,6 +1,6 @@
 package PlantClasses;
 
-public class Cactus extends Plant implements WaterMessage {
+public class Cactus extends Plant {
 
     public Cactus(double heightInMeters, String name) {
         super(heightInMeters, name);

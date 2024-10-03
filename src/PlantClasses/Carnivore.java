@@ -1,6 +1,6 @@
 package PlantClasses;
 
-public class Carnivore extends Plant implements WaterMessage {
+public class Carnivore extends Plant {
     public Carnivore(double heightInMeters, String name) {
         super(heightInMeters, name);
         baseWaterInLit = 0.1;

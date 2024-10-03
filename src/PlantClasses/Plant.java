@@ -36,6 +36,7 @@ abstract public class Plant implements WaterMessage {
 
     @Override
     public void wateringMessage(WaterMessage plant) {
-        JOptionPane.showMessageDialog(null, "Växten " + this.getName() + " behöver " + waterAmountCalculator((Plant) plant) + " liter " + this.waterTypeString);
+        JOptionPane.showMessageDialog(null, "Växten " + this.getName() +
+                " behöver " + waterAmountCalculator((Plant) plant) + " liter " + this.waterTypeString);
     }
 }
