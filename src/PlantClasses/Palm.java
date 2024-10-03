@@ -1,6 +1,7 @@
 package PlantClasses;
 
 public class Palm extends Plant {
+
     public Palm(double heightInMeters, String name) {
         super(heightInMeters, name);
         baseWaterInLit = 0;

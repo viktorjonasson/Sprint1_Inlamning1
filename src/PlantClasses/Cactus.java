@@ -14,21 +14,8 @@ public class Cactus extends Plant {
         return super.waterAmountCalculator(plant);
     }
 
-//    @Override
-//    public String wateringMessage(WaterMessage plant) {
-//        return "Växten " + this.getName() + " behöver " + waterAmountCalculator((Plant) plant) + " liter " + this.waterTypeString;
-//    }
-
     @Override
     public void wateringMessage(WaterMessage plant) {
         super.wateringMessage(plant);
     }
-
-
-
-    /*@Override
-    public double waterAmountLitres(Plant plant) {
-        return (plant.getHeightInMeters() * plant.litOfWaterPerMeter) + (plant.baseWaterInLit);
-        //return PrintMethod.waterAmountLitresTest(plant);
-    }*/
 }
