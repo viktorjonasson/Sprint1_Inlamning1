@@ -1,9 +1,8 @@
 package PlantClasses;
 
+//Interface, används för att huvudprogrammet endast ska komma åt det som behövs för programmet.
 public interface WaterMessage {
-    //Ge vatten
-    void wateringMessage(WaterMessage plant);
 
-    //Mängd vatten, returnerar double?
-    //double waterAmountLitres(Plant plant);
+    void wateringMessage(WaterMessage plant);
+    String getName();
 }

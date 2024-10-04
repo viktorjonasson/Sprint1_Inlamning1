@@ -4,12 +4,12 @@ import javax.swing.*;
 
 /*Här har vi lite exempel på inkapsling.
 - Jag har satt två variabler till private, de går endast att nå från denna klass.
-- Lite längre ner har vi getters och setters som säkert sätter och hämtar värdet.
-- Jag anropar dessutom mina setters från konstruktorn, om man senare vill göra något annat vid initialiseringen av
-variablerna, typ validera input, behöver man bara göra detta där.
+- Lite längre ner har vi getters och setters som säkert sätter och hämtar värdet på dessa.
+- Jag kan också sätta värden genom konstruktorn. Här anropar jag dessutom mina setters från konstruktorn, om man senare
+vill göra något annat vid initialiseringen av variablerna, typ validera input, behöver man bara göra detta där.
 - Tre variabler är protected, detta för att de ska kunna nås av subklasserna. Dessa har värden som är gemensamma för
-hela klassen därav initialiserar jag dem i subklasserna och gör inga konstruktorer eller setters här då de aldrig
-ska ändras. Eftersom de är protected kan mitt huvudprogram inte ändra dem.
+hela subklassen, men olika för resp. subklass, därav initialiserar jag dem i subklasserna och gör inga konstruktorer
+eller setters här då de aldrig ska ändras. Eftersom de är protected kan mitt huvudprogram inte ändra dem då det inte ligger i samma paket.
  */
 
 abstract public class Plant implements WaterMessage {
@@ -24,6 +24,8 @@ abstract public class Plant implements WaterMessage {
         setName(name);
     }
 
+    // Ex. på polymorfism, implementerar metoden från interfacet WaterMessage
+    @Override
     public String getName() {
         return name;
     }
@@ -47,6 +49,7 @@ abstract public class Plant implements WaterMessage {
     }
 
     // Implementering av interfacet WaterMessage:s metod som meddelar användaren vad och hur mycket vätska växten ska få.
+    // Även exempel på polymorfism.
     @Override
     public void wateringMessage(WaterMessage plant) {
         JOptionPane.showMessageDialog(null, "Växten " + this.getName() +
